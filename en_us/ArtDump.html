@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href = "/artdumps/goober.png">
     <title>les arts</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
     
@@ -22,25 +22,33 @@
   <div margin-left=25%>
     <script>
     function randomize(values) {
-    let index = values.length,
-      randomIndex;
-  
-      // While there remain elements to shuffle.
-      while (index != 0) {
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * index);
-        index--;
-    
-        // And swap it with the current element.
-        [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
-      }
-    
-      return values;
-    }
-    const files = ["tallme.png","chirp.png","eepy.png","natedressup.png","big and intimidating tail.png","sillyme.png","witchelix.png","yanny.png","jay.png","flickeringpose.png", "apollyon.png", "blahaj.png"];
+  for (let index = values.length; index > 0; index--) {
+    const randomIndex = Math.floor(Math.random() * index);
+
+    [values[index - 1], values[randomIndex]] = [
+      values[randomIndex],
+      values[index - 1]
+    ];
+  }
+
+  return values;
+}
+
+fetch("../artdumps/artfiles.json")
+  .then(response => response.json())
+  .then(files => {
     randomize(files).forEach(file => {
-        document.body.innerHTML += `<img src="../artdumps/${file}" class=artdump>`;
+      const image = document.createElement("img");
+      image.src = `../artdumps/${encodeURIComponent(file)}`;
+      image.alt = file;
+      image.classList.add("artdump");
+
+      document.body.appendChild(image);
     });
+  })
+  .catch(error => {
+    console.error("Could not load artwork:", error);
+  });
     </script>
   </div>
 </body>

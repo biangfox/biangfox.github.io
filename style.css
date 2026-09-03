@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Leahyol';
-  src: url('/Leahyol.ttf') format('truetype');
+  src: url('Fonts/Leahyol.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -165,11 +165,16 @@ img.artdump {
 }
 
 .webring { 
-
   float: center;
-  font-size:16px;
+  font-size: 13px;
+}
+.webring arrow{ 
+   float: center;
 }
 
+.webring body {
+  float: center; 
+}
 
 body {
   background-color: #ffccaa;
