@@ -27,24 +27,20 @@
   font-family: 'Leahyol' !important;
 }
 
-.iframe wikipedia { 
-  font-family: inherit !important;
-}
-
 .webring {
   font-family: 'Leahyol';
-  text-align: center; 
-  align-items: center; 
+  text-align: center;
+  align-items: center;
   font-size: 30px;
   width: 50%;
 }
-.webring a{ 
+.webring a{
   border-style:solid;
   font-style: bold;
   padding: 10px 10px;
   color: black;
 }
-.webring a.arrow { 
+.webring a.arrow {
   font-size: 60px;
 }
 
@@ -75,7 +71,7 @@
 }
 .sidebar a {
   border-style: solid;
-  width: 210px;
+  width: 134px;
   display: flex;
   justify-content: center;
   align-items:center;
@@ -101,19 +97,19 @@
   text-align:center;
 }
 
-.sidebar a.a88x31 { 
+.sidebar a.a88x31 {
   display: flex;
   justify-content: center;
   width: 88px;
   height: 31px;
-} 
+}
 
 img.artdump {
   margin-left: 2.5%;
   margin-top:2.5%;
   display: block;
   width: 25%;
-  height: 25%; 
+  height: 25%;
   float: right;
   position: relative;
   align-content: center;
@@ -135,8 +131,8 @@ img.artdump {
   text-decoration: none;
   font-size: 36px;
   font-style: bold;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 75px;
   border-style: solid;
@@ -160,20 +156,20 @@ img.artdump {
 
 .topnav a.lang {
   float: right;
-  text-align: center; 
+  text-align: center;
   font-size: 11px;
 }
 
-.webring { 
+.webring {
   float: center;
   font-size: 13px;
 }
-.webring arrow{ 
+.webring arrow{
    float: center;
 }
 
 .webring body {
-  float: center; 
+  float: center;
 }
 
 body {
@@ -182,7 +178,7 @@ body {
 }
 h1 {
   font-family: 'Leahyol';
-  font-size: 40 
+  font-size: 40
 }
 
 h2 {
@@ -196,14 +192,6 @@ h3 {
   font-size: 30
 }
 
-p { 
+p {
   font-family: 'Roboto';
-} 
-
-
-
-
-
-
-
-
+}
